@@ -1,0 +1,12 @@
+
+<h4>Selecionar Cidade</h4>
+<mat-form-field>
+  <mat-label>Cidade</mat-label>
+  <mat-select [(value)]="selected" (selectionChange)="cidadeSelecionada(selected)">
+    <mat-option *ngFor="let city of citys" [value]="city.Id">
+      {{city.NomeCity}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<a [routerLink]="['/ParentChild2/', id]">Selecionar</a>
